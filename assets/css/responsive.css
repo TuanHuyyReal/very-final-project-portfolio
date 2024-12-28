@@ -268,11 +268,26 @@
   }
 }
 /* very small phone */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 325px) {
+  input#theme[data-theme-toggle]::before {
+    height: 50px !important;
+    content: "Đổi màu";
+  }
+  .section-title {
+    font-size: 12vw !important;
+  }
+  section.about p.p {
+    top: 135px !important;
+  }
+  section.works p.p {
+    top: 120px !important;
+    height: 50px !important;
+  }
   section.about .section-title {
     font-size: 35px;
   }
   section.works .section-title {
+    text-align: center !important;
     font-size: 35px !important;
   }
   a.learn-more {
@@ -281,17 +296,17 @@
     width: 160px;
     padding: 1rem !important;
   }
-  section.gallery b.no-deco {
-    padding: 0 0 !important;
-
-    scale: 0.7;
+  section.works b.no-deco {
+    position: absolute;
+    left: 0%;
+    top: 15% !important;
+    padding: 0 !important;
   }
-  section.gallery a.btn {
-    font-size: 11px !important;
-    right: 0px;
-    width: 0px;
+  section.works ul.items-list li.items a.btn {
+    font-size: 15px !important;
+    padding: 0 !important;
   }
-  section.gallery p.item-info {
+  section.works p.item-info {
     position: relative;
     top: 15px;
   }
