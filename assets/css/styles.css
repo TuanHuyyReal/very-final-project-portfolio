@@ -62,7 +62,7 @@ input#theme::before {
   content: "Đổi màu trang web!";
   border-radius: 30px;
   width: max-content;
-  height: 6vh;
+  height: 8vh;
   padding: 1rem 3rem;
   font-size: calc(var(--text-font-size) + 1rem);
   background-color: var(--hcont-co);
