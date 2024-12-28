@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tuấn Huy - Portfolio - Project cuối khoá</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/animation.css" />
+  </head>
+  <body>
+    <main>
+      <!-- introduction section (header)
+        gồm title, text, flaticon, hình ảnh
+      -->
+      <header id="header">
+        <section class="heading-container">
+          <h1 id="web-title">LÝ TUẤN HUY</h1>
+          <h2 class="web-title-clone">LÝ TUẤN HUY</h2>
+          <h2 class="web-title-clone">LÝ TUẤN HUY</h2>
+          <h2 class="web-title-clone">LÝ TUẤN HUY</h2>
+          <h2 class="web-title-clone">LÝ TUẤN HUY</h2>
+          <h2 class="web-title-clone">LÝ TUẤN HUY</h2>
+          <h2 class="web-title-clone">LÝ TUẤN HUY</h2>
+          <h2 class="web-title-clone">LÝ TUẤN HUY</h2>
+          <h2 class="web-title-clone">LÝ TUẤN HUY</h2>
+        </section>
+        <div class="left">
+          <p class="p">
+            Điều làm tôi khác biệt là tư duy. Tư duy linh hoạt giúp tôi nhìn
+            nhận thế giới và giải quyết vấn đề một cách sáng tạo. Chính nó tạo
+            nên sự khác biệt và giá trị trong mọi hành động của tôi.
+          </p>
+          <ul class="social-medias">
+            <li class="items">
+              <a href="#!"
+                ><img
+                  src="assets/images/icons/instagram.png"
+                  alt="my instagram"
+              /></a>
+            </li>
+            <li class="items">
+              <a href="#!">
+                <img src="assets/images/icons/youtube.png" alt="my youtube" />
+              </a>
+            </li>
+            <li class="items">
+              <a href="#!">
+                <img src="assets/images/icons/twitter.png" alt="my twitter" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <p class="p">
+            Hãy đắm chìm vào một thế giới chỉ riêng ta, nơi không có giới hạn và
+            mọi điều đều có thể. Trong không gian ấy, ta tự do khám phá, sáng
+            tạo và sống trọn vẹn từng khoảnh khắc. Đây là nơi mà chỉ ta mới có
+            thể cảm nhận và định nghĩa được giá trị thực sự của bản thân.
+          </p>
+        </div>
+      </header>
+      <!-- navbar
+        gồm about, works, gallery, contact => anchor vào section
+        juscontent center + width => margin auto 
+      -->
+      <nav class="navbar container-fluid">
+        <ul>
+          <li><a href="#about">Về tôi </a></li>
+          <li><a href="#works">Hoạt động </a></li>
+          <li>
+            <a href="#gallery"> Trưng bày</a>
+          </li>
+          <li>
+            <a href="#contact-me">Liên lạc</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- section about -->
+      <section class="about" id="about">
+        <h3 class="section-title">VỀ TÔI</h3>
+        <div class="container">
+          <div class="btn-container">
+            <a href="#about" class="btn learn-more">Tìm hiểu thêm</a>
+            <a href="index.html" class="btn arrow" target="_blank">
+              <img
+                src="assets/images/icons/learn-more-arrow.png"
+                alt="Learn more!"
+              />
+            </a>
+          </div>
+          <p class="p">
+            Tôi là một người <b>yêu động vật</b>, luôn cảm thấy vui vẻ khi được
+            ở bên những chú chó, mèo và các loài động vật khác. Ngoài ra, tôi
+            cũng rất <b>thích chơi game</b>, đặc biệt là các trò chơi chiến
+            thuật và phiêu lưu. Khi có thời gian rảnh, tôi thường ngồi xuống và
+            <b>đọc sách</b>, từ những cuốn tiểu thuyết thú vị đến các sách về
+            phát triển bản thân. Những sở thích này giúp tôi thư giãn và tạo
+            thêm niềm vui trong cuộc sống.
+          </p>
+        </div>
+      </section>
+      <!-- carousel  sách yêu thích-->
+      <div class="crs-fav-book">
+        <h2 class="title" id="fav-book">Cuốn sách yêu thích</h2>
+        <div
+          id="carouselExampleAutoplaying"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a
+                href="https://spiderum.com/bai-dang/Gioi-thieu-sach-Lam-ban-voi-bau-troi-Nguyen-Nhat-Anh-nuh"
+                target="_blank"
+              >
+                <img
+                  src="assets/images/carousel/item1.png"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a
+                href="https://spiderum.com/bai-dang/Nha-gia-kim-7prOkWAnrPCF"
+                target="_blank"
+              >
+                <img
+                  src="assets/images/carousel/item2.png"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a
+                href="https://spiderum.com/bai-dang/REVIEW-SACH-CHO-TOI-XIN-MOT-VE-DI-TUOI-THO-NGUYEN-NHAT-ANH-77igNstyDLjf"
+                target="_blank"
+              >
+                <img
+                  src="assets/images/carousel/item3.png"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </a>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- hoạt động
+        gồm vài thẻ hr,
+         1 list item {
+            thời gian
+            tên dự án
+            paragraph ngắn (2 dòng)
+            một button để discover
+        } 
+      -->
+      <section class="works container-fluid" id="works">
+        <!-- giới thiệu -->
+        <div class="sct-info">
+          <h3 class="section-title">HOẠT ĐỘNG</h3>
+          <div class="container">
+            <div class="btn-container">
+              <a href="#gallery" class="btn learn-more">Xem tất cả</a>
+              <a href="#gallery" class="btn arrow">
+                <img
+                  src="assets/images/icons/learn-more-arrow.png"
+                  alt="Learn more!"
+                />
+              </a>
+            </div>
+            <p class="p">
+              Tôi đã có một chút kinh nghiệm trong việc thiết kế website, từ
+              việc lựa chọn giao diện đến việc tối ưu hóa chức năng. Tôi quen
+              thuộc với các công cụ và ngôn ngữ lập trình như HTML, CSS, và
+              JavaScript. Ngoài ra, tôi cũng có kinh nghiệm trong việc tạo ra
+              các trang web thân thiện với người dùng và dễ sử dụng. Với nền
+              tảng này, tôi mong muốn phát triển kỹ năng thiết kế web của mình
+              hơn nữa.
+            </p>
+          </div>
+        </div>
+        <!-- main-content => hr + list dự án -->
+        <div class="content">
+          <hr />
+          <ul class="items-list">
+            <li class="items">
+              <b class="no-deco">2024</b>
+              <p class="items-info">
+                <b class="items-name title">Moony Groony (shopping website)</b>
+                <br />
+                <br />
+                <i class="no-deco">
+                  Đây là một sản phẩm tôi đã hoàn thiện trong quá trình học khóa
+                  lập trình web cơ bản của MindX. Qua đó, tôi đã áp dụng các
+                  kiến thức đã học để xây dựng và phát triển dự án của mình.
+                </i>
+              </p>
+              <a
+                href="https://tuanhuyyreal.github.io/moonygroony/"
+                class="btn"
+                target="_blank"
+                >Khám phá</a
+              >
+            </li>
+            <li class="items">
+              <b class="no-deco">2024</b>
+              <p class="items-info">
+                <b class="items-name title">Máy tính (calculator)</b>
+                <br />
+                <br />
+                <i class="no-deco">
+                  Đây là sản phẩm tôi hoàn thiện trong quá trình làm quen với
+                  lập trình web. Qua đó, tôi đã áp dụng những kiến thức cơ bản
+                  để tạo ra một sản phẩm hoàn chỉnh.
+                </i>
+              </p>
+              <a
+                href="https://tuanhuyyreal.github.io/calculator/"
+                class="btn"
+                id="calc-link"
+                target="_blank"
+                >Khám phá</a
+              >
+            </li>
+            <li class="items">
+              <b class="no-deco">2024</b>
+              <p class="items-info">
+                <b class="items-name title">Trong mắt con, mẹ là (dịp 20/10)</b>
+                <br />
+                <br />
+                <i class="no-deco">
+                  Đây là sản phẩm tôi hoàn thiện để dành tặng cho mẹ nhân dịp
+                  20/10, món quà nhỏ nhưng đầy ý nghĩa thể hiện tình cảm của tôi
+                  dành cho mẹ. Tôi đã hy vọng món quà này sẽ mang lại niềm vui
+                  và sự hạnh phúc cho mẹ.
+                </i>
+              </p>
+              <a
+                href="https://tuanhuyyreal.github.io/thisIstheRealFormyMom/"
+                class="btn"
+                target="_blank"
+                id="mom-link"
+                >Khám phá</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- section gallery => gồm
+         title
+         1 paragraph (Lorem)
+         view all btn
+         1 pic với 100vw
+         3 ảnh con (grid)
+      -->
+      <section class="gallery container-fluid" id="gallery">
+        <div class="text-content">
+          <h3 class="section-title">TRƯNG BÀY<br />SẢN PHẨM</h3>
+          <p class="p">
+            Dưới đây là phần trưng bày những sản phẩm tiêu biểu trong năm 2024
+            của tôi. Mỗi sản phẩm đều được thiết kế tỉ mỉ và sáng tạo, mang đến
+            những trải nghiệm mới mẻ và chất lượng vượt trội. Hy vọng bạn sẽ tìm
+            thấy sự ấn tượng và thú vị trong bộ sưu tập này.
+          </p>
+        </div>
+        <div class="content">
+          <div class="container text-center">
+            <div class="row">
+              <div class="col">
+                <img
+                  src="assets/images/gallery-section/moony-groony.png"
+                  alt="#!"
+                />
+              </div>
+              <div class="col">
+                <img
+                  class="two"
+                  src="assets/images/gallery-section/calculator.png"
+                  alt="#!"
+                />
+              </div>
+              <div class="col">
+                <img
+                  src="assets/images/gallery-section/trongmatconmela.png"
+                  alt="#!"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- contact gồm
+        CONTACT ME + img (social media) + địa chỉ email 
+      -->
+      <section class="contact-me" id="contact-me">
+        <h2 class="big-title">LIÊN LẠC VỚI TÔI!</h2>
+        <div class="clone">
+          <h2 class="big-title clone">LIÊN LẠC VỚI TÔI!</h2>
+          <h2 class="big-title clone">LIÊN LẠC VỚI TÔI!</h2>
+          <h2 class="big-title clone">LIÊN LẠC VỚI TÔI!</h2>
+          <h2 class="big-title clone">LIÊN LẠC VỚI TÔI!</h2>
+          <h2 class="big-title clone">LIÊN LẠC VỚI TÔI!</h2>
+          <h2 class="big-title clone">LIÊN LẠC VỚI TÔI!</h2>
+          <h2 class="big-title clone">LIÊN LẠC VỚI TÔI!</h2>
+          <h2 class="big-title clone">LIÊN LẠC VỚI TÔI!</h2>
+          <h2 class="big-title clone">LIÊN LẠC VỚI TÔI!</h2>
+        </div>
+
+        <ul class="social-medias">
+          <div>
+            <li class="items">
+              <a href="https://www.facebook.com/" target="_blank">
+                <img src="assets/images/icons/facebook.png" alt=""
+              /></a>
+              <p class="p">user_1406</p>
+            </li>
+            <li class="items" id="instagram">
+              <a href="https://www.instagram.com" target="_blank">
+                <img src="assets/images/icons/instagram.png" alt=""
+              /></a>
+              <p class="p">abcxyz_123</p>
+            </li>
+          </div>
+          <li class="items" id="gmail">
+            <a
+              href="https://mail.google.com/mail/u/0/?ogbl#inbox"
+              target="_blank"
+            >
+              <img src="assets/images/icons/email.png" alt=""
+            /></a>
+            <p class="p email">lytuanhuy1406@gmail.com</p>
+          </li>
+        </ul>
+        <!-- div star container => decorate -->
+        <div class="star-container">
+          <img
+            src="assets/images/icons/star.png"
+            alt=""
+            class="star"
+            id="star1"
+          />
+          <img
+            src="assets/images/icons/star.png"
+            alt=""
+            class="star"
+            id="star2"
+          />
+          <img
+            src="assets/images/icons/star.png"
+            alt=""
+            class="star"
+            id="star3"
+          />
+          <img
+            src="assets/images/icons/outline-star.png"
+            alt=""
+            class="star"
+            id="star4"
+          />
+          <img
+            src="assets/images/icons/sparkles.png"
+            alt=""
+            class="star"
+            id="sparkles"
+          />
+        </div>
+      </section>
+    </main>
+<!-- random -->
+    <!-- arrow button => để quay về đầu trang / nav -->
+    <a href="#header" class="btn" id="to-top">
+      <img src="assets/images/icons/learn-more-arrow.png" alt="Learn more!" />
+    </a>
+    <input type="checkbox" class="btn" id="theme" data-theme-toggle >
+  </input>
+    <!-- footer gồm
+      cảm ơn tới => MINDX, CHATGPT, CODDYTECH, BOOTSTRAP, FLATICON 
+    -->
+    <footer class="gratitude container-fluid" id="gratitude">
+      <h2 class="big-title">
+        CẢM ƠN MINDX, CHATGPT, CODDYTECH, BOOTSTRAP, FLATICON, DRIBBBLE đã hỗ
+        trợ em làm nên dự án này !!!!
+      </h2>
+    </footer>
+    <div></div>
+    <!-- script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script đổi màu web -->
+     <script src="app.js"></script>
+  </body>
+</html>

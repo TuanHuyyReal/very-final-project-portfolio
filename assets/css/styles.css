@@ -1,0 +1,638 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* chèn font  */
+
+:root {
+  --lm-font-size: calc(0.5rem + 100%);
+  --st-font-size: calc(5rem + 2vw);
+  --text-font-size: calc(1rem + 0.5vw);
+}
+[data-theme="dark"] {
+  --pri-co: #213555;
+  --sec-co: #3e5879;
+  --bri-co: #d8c4b6;
+  --hcont-co: #f5efe7;
+}
+[data-theme="light"] {
+  --pri-co: #78b3ce;
+  --sec-co: #3e5879;
+  --bri-co: #c9e6f0;
+  --hcont-co: #fbf8ef;
+}
+/* tổng thể */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat";
+  font-size: 62.5%;
+  /* font size 62.5 để quy định 1 rem = 10px */
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--pri-co);
+  margin: 0;
+  padding: 0;
+}
+p,
+h1,
+h2 {
+  cursor: default;
+}
+p.p {
+  height: 15vh;
+  overflow-y: auto;
+  scrollbar-width: 0px;
+  font-size: 2rem;
+}
+a#to-top {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  transform: rotate(135deg);
+  transition: transform 0.3s ease-in-out;
+  z-index: 2;
+}
+/* random */
+a#to-top:hover {
+  transform: rotate(495deg);
+}
+/* random */
+input#theme::before {
+  z-index: 6;
+  content: "Đổi màu trang web!";
+  border-radius: 30px;
+  width: max-content;
+  height: 6vh;
+  padding: 1rem 3rem;
+  font-size: calc(var(--text-font-size) + 1rem);
+  background-color: var(--hcont-co);
+  color: var(--sec-co);
+  position: fixed;
+  bottom: 5rem;
+  left: 2rem;
+  transition: background-color 0.3s linear, color 0.2s ease;
+}
+input#theme:checked::before {
+  background-color: var(--sec-co);
+  color: var(--hcont-co);
+}
+a.arrow {
+  position: relative;
+  transform: translate(-4%, -10%);
+  scale: 1;
+}
+/* header */
+header {
+  height: 50vw;
+  width: 98vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--hcont-co);
+  padding: 2rem;
+  border-radius: 50px;
+  position: relative;
+  overflow-y: hidden;
+}
+.heading-container {
+  width: 90%;
+  height: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 10vw;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading-container #web-title {
+  color: var(--pri-co);
+  opacity: 2;
+}
+.heading-container .web-title-clone {
+  color: var(--bri-co);
+  opacity: 0.3;
+}
+/* căn chỉnh thẻ p thuộc header */
+header p {
+  width: 30%;
+  font-size: calc(1vw + 0.5rem);
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--pri-co);
+}
+/* căn chỉnh img trong header */
+header img {
+  width: 5vw;
+  border-radius: 50%;
+  padding: 2px;
+}
+/* thêm pseudo hover cho img */
+header img:hover {
+  transition: 0.3s linear;
+  transform: rotate(20deg);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  scale: 1.03;
+}
+header img:not(:hover) {
+  transition: 0.3s linear;
+}
+header ul.social-medias {
+  display: flex;
+}
+/* căn lề left => sát mép trái */
+header .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+  top: 40%;
+}
+/* căn lề right => sát mép phải */
+header div.right {
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  width: 30vw;
+}
+header div.right p {
+  width: 100%;
+  text-align: right;
+}
+/* tuỳ chỉnh navbar */
+
+.navbar {
+  margin-top: 3rem;
+  width: 78vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: calc(1rem + 1vw);
+  display: flex;
+  align-items: center;
+}
+.navbar ul {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar ul a {
+  color: var(--hcont-co);
+  padding: 3rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.navbar ul a:not(:hover) {
+  transition: 0.3s ease-out;
+}
+.navbar ul a:hover {
+  transition: 0.3s ease-in;
+  text-decoration: underline;
+  scale: 1.1;
+}
+/* style about section */
+section.about {
+  width: 80vw;
+  height: 40vh;
+  color: var(--bri-co);
+  display: flex;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.about .section-title {
+  font-size: var(--st-font-size);
+  font-family: "Barlow";
+  font-weight: 800;
+  width: 50vw;
+  text-align: right;
+  margin-top: 2rem;
+}
+section.about .container {
+  width: 50vw;
+  height: 40vh;
+  font-size: var(--text-font-size);
+  position: relative;
+}
+section.about .btn-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+section.about .btn-container .btn {
+  display: inline-block;
+  height: calc(50% + 2vw);
+}
+section.about .btn-container .learn-more {
+  margin-top: 0.5rem;
+  font-size: var(--lm-font-size);
+  color: var(--bri-co);
+  padding: 1rem 4.5rem;
+  border: 0.5px solid var(--bri-co);
+  border-radius: 999px;
+}
+section.about .btn-container .learn-more:hover {
+  background-color: var(--bri-co);
+  color: var(--pri-co);
+  transition: 0.3s linear;
+}
+section.about .btn-container .learn-more:not(:hover) {
+  transition: 0.3s linear;
+}
+section.about .btn-container img {
+  transform: rotate(180deg);
+}
+section.about .btn-container img:hover {
+  transform: rotate(405deg);
+  transition: 0.3s ease;
+}
+section.about .btn-container img:not(:hover) {
+  transition: 0.3s ease;
+}
+section.about .container .p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  width: 35vw;
+  line-height: calc(1vw + 50%);
+}
+section.about .container .p b {
+  font-weight: 700;
+}
+/* điều chỉnh kích thước carousel items */
+.carousel-item {
+  width: 30vw;
+  height: 30vw;
+  visibility: visible;
+  padding: 5vw;
+  background-color: #fff;
+  scale: 0.7;
+  position: relative;
+  left: 35%;
+  border-radius: 50%;
+}
+.carousel-item:hover {
+  scale: 0.8;
+  transition: 0.3s linear;
+}
+.carousel-item:not(:hover) {
+  transition: 0.3s linear;
+}
+/* căn chỉnh "cuốn sách yêu thích" ra giữa */
+h2#fav-book {
+  margin-top: var(--st-font-size);
+  text-align: center;
+  font-size: calc(3vw + 2rem);
+  color: var(--bri-co);
+  font-weight: 800;
+  font-family: "Oswald";
+}
+/* works section */
+
+section.works {
+  width: 80vw;
+  height: 125vh;
+  color: var(--bri-co);
+  display: flex;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.works h3.section-title {
+  font-size: var(--st-font-size);
+  font-family: "Barlow";
+  font-weight: 800;
+  width: 30vw;
+  text-align: left;
+  position: absolute;
+  right: 3%;
+  top: 0;
+}
+section.works .container {
+  width: 80vw;
+  height: 60vh;
+  font-size: var(--text-font-size);
+  position: relative;
+}
+section.works .p {
+  position: absolute;
+  bottom: 30%;
+  right: 0;
+  text-align: right;
+  width: 30vw;
+  line-height: calc(1vw + 80%);
+}
+section.works .container .btn-container {
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  display: flex;
+}
+section.about .btn-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+section.works .btn-container .btn {
+  display: inline-block;
+  height: calc(50% + 2vw);
+}
+section.works .btn-container .learn-more {
+  margin-top: 0.5rem;
+  font-size: var(--lm-font-size);
+  color: var(--bri-co);
+  padding: 1rem 4.5rem;
+  border: 0.5px solid var(--bri-co);
+  border-radius: 999px;
+}
+section.works .btn-container .learn-more:hover {
+  background-color: var(--bri-co);
+  color: var(--pri-co);
+  transition: 0.3s linear;
+}
+section.works .btn-container .learn-more:not(:hover) {
+  transition: 0.3s linear;
+}
+section.works .btn-container img {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+section.works .btn-container img:hover {
+  transform: rotate(405deg);
+}
+section.works .content {
+  position: absolute;
+  height: 120vh;
+}
+section.works hr {
+  width: 80vw;
+  border: 1px solid var(--hcont-co);
+  color: var(--hcont-co);
+  position: absolute;
+  bottom: 50%;
+}
+section.works .content .items-list {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section.works > .content .items-list .items {
+  font-size: calc(1rem + 50%);
+  padding: 5rem 0;
+  display: flex;
+  align-items: center;
+  width: 80vw;
+  border-radius: 15px 15px 0 0;
+  border-bottom: 0.5px solid var(--hcont-co);
+  cursor: default;
+}
+section.works > .content .items-list .items:hover {
+  background-color: var(--hcont-co);
+  color: var(--pri-co);
+  transition: 0.3s ease;
+  border-radius: 15px;
+}
+
+section.works > .content .items-list .items:not(:hover) {
+  transition: 0.3s ease;
+}
+
+section.works .content .items-list .items b.no-deco {
+  padding: 2rem 5rem;
+  text-align: center;
+}
+section.works .content .items-list .items i.no-deco {
+  width: 50vw;
+}
+section.works .content .items-list .items b.title {
+  font-weight: 700;
+}
+section.works .content .items-list .items a.btn {
+  color: var(--bri-co);
+  font-size: calc(1rem + 50%);
+  width: 20rem;
+  border: 1px solid var(--pri-co);
+  border-radius: 10px;
+  padding: 1rem 0 1rem 0;
+  margin-right: 2rem;
+}
+a.btn#calc-link {
+  width: 17rem;
+}
+a.btn#mom-link {
+  width: 23rem;
+}
+section.works .content .items-list .items a.btn:hover {
+  border: 1px solid var(--bri-co);
+  color: white !important;
+  background-color: var(--pri-co);
+  transition: 0.2s linear;
+}
+section.works .content .items-list .items:hover a.btn {
+  border: 1px solid var(--bri-co);
+  color: var(--pri-co);
+  transition: 0.2s linear;
+}
+section.works .content .items-list .items a.btn:not(:hover) {
+  transition: 0.2s linear;
+}
+/* section trưng bày */
+section.gallery {
+  height: 80vh;
+  margin-top: 20vh;
+  color: var(--bri-co);
+  position: relative;
+}
+section.gallery .text-content {
+  position: relative;
+  height: 35vh;
+}
+section.gallery h3.section-title {
+  font-size: var(--st-font-size);
+  font-family: "Barlow";
+  font-weight: 800;
+  width: 50vw;
+  text-align: left;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+section.gallery p.p {
+  font-size: var(--text-font-size);
+  width: 35vw;
+  text-align: right;
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  line-height: calc(1rem + 0.8vw);
+  font-size: 2rem;
+}
+section.gallery .content {
+  margin-top: 5rem;
+  height: 45vh;
+}
+section.gallery .content img {
+  width: 20vw;
+  border-radius: 35px;
+}
+
+section.gallery .content .row img:hover {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transform: rotate(15deg);
+  transition: 0.4s ease;
+}
+section.gallery .content .row img.two:hover {
+  transform: rotate(-15deg) !important;
+}
+section.gallery .content .row img:not(:hover) {
+  transition: 0.4s ease;
+}
+/* section contact me
+ */
+
+section.contact-me {
+  margin-top: 20vh;
+  height: 61vh;
+  width: 98vw;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-color: var(--hcont-co);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+section.contact-me h2.big-title {
+  font-family: "Barlow";
+  font-size: calc(var(--st-font-size) + 2vw);
+  text-align: center;
+  font-weight: 800;
+  color: var(--pri-co);
+  z-index: 1;
+}
+section.contact-me div.clone {
+  position: absolute;
+  width: 98vw;
+  bottom: 0;
+}
+section.contact-me h2.clone {
+  color: var(--bri-co) !important;
+  opacity: 0.3;
+  z-index: -1;
+}
+section.contact-me .social-medias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+section.contact-me .social-medias li.items img {
+  width: 8vw;
+}
+section.contact-me .social-medias div {
+  display: flex;
+  justify-content: space-between;
+}
+section.contact-me .social-medias div li {
+  padding: 5rem 15rem;
+}
+section.contact-me #gmail {
+  position: absolute;
+  bottom: 10%;
+  left: 46%;
+}
+section.contact-me .items:hover img {
+  transform: rotate(360deg);
+  transition: 0.5s ease-in;
+  scale: 1.2;
+}
+
+section.contact-me .items:not(:hover) img {
+  transition: 0.5s ease-out;
+}
+section.contact-me .items p {
+  margin-top: 2em;
+  font-size: var(--text-font-size);
+  color: var(--pri-co);
+  font-weight: 800;
+  opacity: 0;
+  text-align: center;
+  position: relative;
+}
+section.contact-me #gmail p {
+  left: -25%;
+}
+section.contact-me .items:hover p {
+  animation: flow-in 0.5s ease-in-out;
+  opacity: 1;
+}
+/* tuỳ chỉnh star */
+.star {
+  z-index: 0;
+  height: 10rem;
+  position: absolute;
+  transition: transform 0.3s linear;
+}
+.star:hover {
+  transform: rotate(180deg);
+}
+.star#star1 {
+  left: 10%;
+  top: 5%;
+}
+#star1:hover {
+  transform: translate(-30%, 15%);
+}
+.star#star2 {
+  right: 2%;
+  bottom: 5%;
+}
+.star#star3 {
+  bottom: 15%;
+  right: 20%;
+}
+#star3:hover {
+  transform: translate(-30%, -50%);
+}
+.star#star4 {
+  left: 10%;
+  bottom: 20%;
+}
+.star#sparkles {
+  right: 10%;
+  top: 5%;
+}
+.star#sparkles:hover {
+  transform: translate(50%, 30%);
+}
+/* footer */
+
+footer {
+  margin-top: 2vh;
+  width: 98vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--pri-co);
+  color: var(--hcont-co);
+  font-size: var(--lm-font-size);
+  text-align: center;
+  font-weight: 800;
+}
+
+/* responsive
+ */
